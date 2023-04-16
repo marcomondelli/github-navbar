@@ -1,0 +1,126 @@
+body{
+    background-color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.menu-items{
+    display: flex;
+}
+body.open .menu-items{
+    display: flex;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    height: 60px;
+    padding: 0 20px;
+    background-color: #161b22;
+}
+
+nav img{
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+a{
+    color: #fff;
+    font-size: 1em;
+    padding :5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.ham-menu{
+    display: none;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding-right: 4px;
+}
+.search input{
+    padding: 4px 10px;
+    color: #e7e9ec;
+    font-size: .7rem;
+    font-size: inherit;
+    border: 0;
+    background: transparent;
+}
+.search button{
+    border: inherit;
+    border-radius: inherit;
+    background: transparent;
+    color: #84888d;
+}
+.menu-items .menu{
+    display: flex;
+    gap: 16px;
+}
+.menu-left{
+    margin-left: 10px;
+}
+.menu-right{
+    position: relative;
+    margin-left: auto;
+    gap: 6px;
+}
+.menu-right img{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
+.menu-right .img-account{
+    position: absolute;
+    top: 0;
+    left: 14px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #161b22;
+    background: linear-gradient(#54a3ff, #006eed);
+    z-index: 1;
+}
+
+@media (max-width: 768px){
+    .menu-items{
+        display: none;
+        width: -webkit-fill-available;
+        flex-direction: column;
+        gap: 16px;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        padding: 0 20px 20px;
+        background: #161b22;
+    }
+    .menu-right{
+        margin-left: 0;
+    }
+    .menu-right img:nth-child(n + 3){
+        display: none;
+    }
+    .menu-left{
+        flex-direction: column;
+        gap: 12px;
+        margin-left: 0;
+    }
+    .menu-left a{
+        border-bottom: 1px solid #30363d;
+        padding-bottom: 10px;
+    }
+    .margin-right {
+        margin-left: 0;
+    }
+    .ham-menu{
+        display: block;
+        filter: invert(1);
+    }
+}
